@@ -1,0 +1,117 @@
+<com.yudapratama.contact_apps_jenius_test.view.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomsheetlayout_addcontact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/activity_addcontact_coorninatorlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_addcontact"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="@string/add_contact" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageview_photo_addcontact"
+                    android:layout_width="@dimen/margin_huge"
+                    android:layout_height="@dimen/margin_huge"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/round_person_black_18dp"
+                    app:layout_aspectRatio="100%"
+                    app:layout_widthPercent="30%" />
+
+                <ImageButton
+                    android:id="@+id/imagebutton_photo_addcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/round_camera_alt_black_18dp"
+                    app:layout_aspectRatio="100%"
+                    app:layout_widthPercent="10%" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_verysmall"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/firstname" />
+
+                    <EditText
+                        android:id="@+id/edittext_firstname_addcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:hint="@string/firstname" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lastname" />
+
+                    <EditText
+                        android:id="@+id/edittext_lastname_addcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:hint="@string/lastname" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/age" />
+
+                    <EditText
+                        android:id="@+id/edittext_age_addcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:hint="@string/age"
+                        android:inputType="number" />
+
+                    <Button
+                        android:id="@+id/button_add_addcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_verysmall"
+                        android:layout_marginRight="@dimen/margin_verysmall"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/add"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</com.yudapratama.contact_apps_jenius_test.view.BottomSheetLayout>

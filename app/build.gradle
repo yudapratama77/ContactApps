@@ -1,0 +1,67 @@
+plugin.user.top.each {
+    apply plugin: it
+}
+android {
+    compileSdkVersion general.sdk.target
+    buildToolsVersion general.buildTools
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion general.sdk.min
+        targetSdkVersion general.sdk.target
+        testInstrumentationRunner general.testRunner
+
+        applicationId app.package
+        versionCode app.versionCode
+        versionName app.versionName
+        multiDexEnabled app.multidexEnabled
+        renderscriptTargetApi app.imgly.renderscriptTarget
+        renderscriptSupportModeEnabled app.imgly.renderscriptEnabled
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled general.proguard.enabled.debug
+            proguardFiles getDefaultProguardFile(general.proguard.script.default), general.proguard.script.main
+        }
+        release {
+            minifyEnabled general.proguard.enabled.release
+            proguardFiles getDefaultProguardFile(general.proguard.script.default), general.proguard.script.main
+        }
+    }
+    compileOptions {
+        sourceCompatibility general.javaCompatibility
+        targetCompatibility general.javaCompatibility
+    }
+    dexOptions {
+        javaMaxHeapSize app.dex.maxHeap
+    }
+    dataBinding {
+        enabled = app.imgly.dataBindingEnabled
+    }
+    lintOptions {
+        general.lint.warnings.each {
+            warning it
+        }
+        general.lint.errors.each {
+            error it
+        }
+    }
+}
+
+dependencies {
+    testCompile dep.test.junit
+    androidTestCompile(dep.test.runner) { exclude module: dep.test.runnerExclude }
+    androidTestCompile(dep.test.espresso) { exclude module: dep.test.espressoExclude }
+
+    dep.base.each {
+        compile it
+    }
+
+    annotationProcessor dep.annotation.butterknife
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:support-v4:24.2.1'
+}
+
+plugin.user.bottom.each {
+    apply plugin: it
+}

@@ -1,0 +1,99 @@
+ <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_contactdetail_coorninatorlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_contactdetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="@string/add_contact"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageview_photo_contactdetail"
+                    android:layout_width="@dimen/margin_huge"
+                    android:layout_height="@dimen/margin_huge"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:layout_aspectRatio="100%"
+                    app:layout_widthPercent="30%"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:layout_margin="@dimen/margin_verysmall"
+                    android:padding="@dimen/margin_medium"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/firstname"/>
+                    <EditText
+                        android:id="@+id/edittext_firstname_contactdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/firstname"
+                        android:layout_marginBottom="@dimen/margin_small"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lastname"/>
+                    <EditText
+                        android:id="@+id/edittext_lastname_contactdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lastname"
+                        android:layout_marginBottom="@dimen/margin_small"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/age"/>
+                    <EditText
+                        android:id="@+id/edittext_age_contactdetail"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/age"
+                        android:layout_marginBottom="@dimen/margin_medium"/>
+
+                    <Button
+                        android:id="@+id/button_update_contactdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_verysmall"
+                        android:layout_marginRight="@dimen/margin_verysmall"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/update"
+                        android:textColor="@color/colorAccent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>

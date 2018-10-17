@@ -1,0 +1,55 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yudapratama.contact_apps_jenius_test.activity.ContactListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="@string/contact"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.yudapratama.contact_apps_jenius_test.activity.ContactListActivity">
+
+        <com.yudapratama.contact_apps_jenius_test.view.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout_contactlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <com.yudapratama.contact_apps_jenius_test.view.RecyclerView
+                android:id="@+id/recyclerview_contactlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="@dimen/margin_verysmall"/>
+        </com.yudapratama.contact_apps_jenius_test.view.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_contactlist"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end|bottom"
+            android:background="@color/blue"
+            android:layout_margin="@dimen/margin_medium"/>
+
+        <com.yudapratama.contact_apps_jenius_test.view.ErrorView
+            android:id="@+id/errorview_contactlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

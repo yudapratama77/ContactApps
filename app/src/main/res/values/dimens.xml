@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="none">0dp</dimen>
+
+    <!-- margins and paddings, n x 32dp -->
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_verysmall">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_verylarge">64dp</dimen>
+    <dimen name="margin_huge">128dp</dimen>
+
+    <!-- sizes, n + 24dp -->
+    <dimen name="size_small">24dp</dimen>
+    <dimen name="size_medium">48dp</dimen>
+    <dimen name="size_large">72dp</dimen>
+
+    <!-- elevations (shadows), n + 4dp -->
+    <dimen name="elevation_low">4dp</dimen>
+    <dimen name="elevation_medium">8dp</dimen>
+
+    <!-- overriden, meant to hack original values -->
+    <dimen name="design_fab_image_size" tools:override="true">@dimen/size_large</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Image dimensions -->
+    <dimen name="product_image_detail_list">128dp</dimen>
+    <dimen name="icon_action_button">20dp</dimen>
+
+    <string name="action_symbol_add">+</string>
+    <string name="action_symbol_remove">X</string>
+</resources>
